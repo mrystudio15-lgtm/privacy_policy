@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paint Pals — Privacy Policy</title>
+<style>
+  :root {
+    --accent: #6C4FF6;
+    --accent-ink: #4A32C4;
+    --accent-soft: #EEE9FE;
+    --bg: #FBFAFF;
+    --surface: #FFFFFF;
+    --text: #211D2E;
+    --text-muted: #6B6478;
+    --border: #E4E0F0;
+    --good: #2E7D32;
+    --good-soft: #E8F5E9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #A78BFA;
+      --accent-ink: #C7B7FF;
+      --accent-soft: #2A2340;
+      --bg: #15121E;
+      --surface: #1C1829;
+      --text: #EDEAF7;
+      --text-muted: #A79FBF;
+      --border: #322C48;
+      --good: #81C784;
+      --good-soft: #1E2E20;
+    }
+  }
+  :root[data-theme="dark"] {
+    --accent: #A78BFA;
+    --accent-ink: #C7B7FF;
+    --accent-soft: #2A2340;
+    --bg: #15121E;
+    --surface: #1C1829;
+    --text: #EDEAF7;
+    --text-muted: #A79FBF;
+    --border: #322C48;
+    --good: #81C784;
+    --good-soft: #1E2E20;
+  }
+  :root[data-theme="light"] {
+    --accent: #6C4FF6;
+    --accent-ink: #4A32C4;
+    --accent-soft: #EEE9FE;
+    --bg: #FBFAFF;
+    --surface: #FFFFFF;
+    --text: #211D2E;
+    --text-muted: #6B6478;
+    --border: #E4E0F0;
+    --good: #2E7D32;
+    --good-soft: #E8F5E9;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .heading-face {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: linear-gradient(160deg, var(--accent), var(--accent-ink));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 18px -6px color-mix(in srgb, var(--accent) 60%, transparent);
+  }
+  .mark svg { width: 28px; height: 28px; }
+  .masthead-text .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent-ink);
+    margin: 0 0 4px;
+  }
+  .masthead-text h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    letter-spacing: -0.01em;
+  }
+  .masthead-text .effective {
+    margin: 4px 0 0;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin: 0 0 32px;
+    text-wrap: balance;
+  }
+  .lede strong { color: var(--accent-ink); }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 0 48px;
+  }
+  .chip {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .chip .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--good);
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+  .chip span.label {
+    font-size: 0.92rem;
+    color: var(--text);
+  }
+
+  section.clause {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+  }
+  section.clause:last-of-type { border-bottom: 1px solid var(--border); }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 14px;
+  }
+  .clause-num {
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    color: var(--accent-ink);
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+  .clause-head h2 {
+    margin: 0;
+    font-size: 1.22rem;
+    letter-spacing: -0.01em;
+  }
+
+  section.clause p { margin: 0 0 12px; max-width: 62ch; }
+  section.clause p:last-child { margin-bottom: 0; }
+  section.clause ul {
+    margin: 0 0 12px;
+    padding-left: 1.2em;
+  }
+  section.clause li { margin-bottom: 6px; max-width: 60ch; }
+  section.clause li:last-child { margin-bottom: 0; }
+
+  .callout {
+    background: var(--good-soft);
+    border: 1px solid color-mix(in srgb, var(--good) 35%, transparent);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0;
+    font-size: 0.95rem;
+  }
+  .callout strong { color: var(--good); }
+
+  code.path {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    padding: 1px 6px;
+    border-radius: 6px;
+    font-size: 0.88em;
+  }
+
+  .contact-card {
+    margin-top: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  .contact-card h2 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+  }
+  .contact-card p { margin: 0 0 14px; color: var(--text-muted); }
+  .contact-card a.email {
+    display: inline-block;
+    color: var(--accent-ink);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1.5px solid currentColor;
+    padding-bottom: 1px;
+  }
+  .contact-card a.email:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  footer.fine {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  @media (max-width: 520px) {
+    .summary-grid { grid-template-columns: 1fr; }
+    .page { padding: 40px 18px 72px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2 L12 22 M2 12 L22 12" stroke="white" stroke-width="0" />
+        <circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.6" fill="none"/>
+        <path d="M8.5 12.5c0 1.9 1.6 3.5 3.5 3.5s3.5-1.6 3.5-3.5c0-1-.4-1.6-1-2-1 .6-2 .3-2-.8 0-.7.4-1.2.9-1.7-.3-.1-.6-.1-.9-.1-2.2 0-4 1.8-4 4.6z" fill="white"/>
+      </svg>
+    </div>
+    <div class="masthead-text">
+      <p class="eyebrow heading-face">Privacy Policy</p>
+      <h1 class="heading-face">Paint Pals</h1>
+      <p class="effective">Effective September 3, 2026</p>
+    </div>
+  </header>
+
+  <p class="lede">
+    Paint Pals is a coloring and painting-practice app made for children.
+    This policy explains, in plain language, what happens to information
+    when your child uses it. The short version: <strong>almost nothing
+    leaves the device</strong>, and we've built it that way on purpose.
+  </p>
+
+  <div class="summary-grid">
+    <div class="chip"><span class="dot"></span><span class="label">No account or sign-up required</span></div>
+    <div class="chip"><span class="dot"></span><span class="label">No ads, no ad tracking</span></div>
+    <div class="chip"><span class="dot"></span><span class="label">No analytics or behavioral profiling</span></div>
+    <div class="chip"><span class="dot"></span><span class="label">Progress is stored only on the device</span></div>
+  </div>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num heading-face">1</span>
+      <h2 class="heading-face">Information we collect</h2>
+    </div>
+    <p>
+      Paint Pals does not collect, transmit, or store any personal
+      information on our servers — because we don't operate any servers
+      the app talks to, and the app makes no network connections of any
+      kind during normal use. There is no account system, no sign-in, and
+      no way for us to identify who is using the app.
+    </p>
+    <p>The only data the app keeps is stored locally on your device:</p>
+    <ul>
+      <li>Which figures have been colored, your child's scores, and star ratings</li>
+      <li>App preferences, such as the last brush or color used</li>
+    </ul>
+    <p>
+      This information stays in the app's private storage on the device.
+      We never see it, and it is not synced to any cloud service or
+      shared with us in any form.
+    </p>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num heading-face">2</span>
+      <h2 class="heading-face">Photos and sharing</h2>
+    </div>
+    <p>
+      When your child taps <strong>Save</strong>, their finished painting
+      is written directly to the device's own photo gallery using
+      Android's standard photo storage system. It never passes through
+      us or leaves the device.
+    </p>
+    <p>
+      The <strong>Share</strong> button hands the finished painting to
+      your device's normal share menu, where you choose the destination
+      app (Messages, email, etc.) — Paint Pals itself never transmits or
+      collects that image. Because this action leaves the app, it sits
+      behind a simple built-in parental gate (a quick math question) so a
+      young child can't trigger it accidentally.
+    </p>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num heading-face">3</span>
+      <h2 class="heading-face">In-app purchases</h2>
+    </div>
+    <p>
+      Paint Pals is free to play, with a generous free sample of figures
+      across every level and category. A single one-time purchase unlocks
+      the full catalog — every remaining figure, in every level and
+      category, all at once. There is no subscription, and nothing
+      renews or charges automatically.
+    </p>
+    <p>
+      Purchases are processed entirely by <strong>Google Play
+      Billing</strong> — Paint Pals never sees or stores your payment
+      details, card number, or billing address. Google's own privacy
+      policy governs that transaction. A parental gate (a quick math
+      question) sits in front of the purchase button so a young child
+      can't start a purchase alone.
+    </p>
+    <p>
+      All we store locally is whether that one-time unlock has been
+      purchased on this device, so it persists between app launches.
+      "Restore Purchase" in Settings recovers it on a new device using
+      your Google Play account — Paint Pals still never sees any payment
+      information as part of that.
+    </p>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num heading-face">4</span>
+      <h2 class="heading-face">Children's privacy</h2>
+    </div>
+    <p>
+      Paint Pals is directed at children, and we take that seriously.
+      In line with the Children's Online Privacy Protection Act (COPPA)
+      and Google Play's Families Policy:
+    </p>
+    <ul>
+      <li>We do not knowingly collect personal information from anyone, including children under 13</li>
+      <li>There are no user accounts, chat features, or ways for a child to communicate with other people through the app</li>
+      <li>There is no user-generated content shared publicly — artwork stays on the child's own device unless a parent actively saves or shares it</li>
+      <li>We do not show behaviorally-targeted advertising, because we do not show advertising at all</li>
+    </ul>
+    <div class="callout">
+      <strong>For parents:</strong> because nothing is collected off the
+      device, there is no remote account or profile to request, export,
+      or delete. Clearing the app's storage (or uninstalling it) in
+      Android's Settings removes all local data immediately.
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num heading-face">5</span>
+      <h2 class="heading-face">Third-party services</h2>
+    </div>
+    <p>
+      Paint Pals is distributed through Google Play and, if you make a
+      purchase, uses Google Play Billing to process it. Beyond the
+      standard services Google Play itself requires to install and run
+      any app, Paint Pals does not integrate any third-party analytics,
+      advertising, or tracking software development kits (SDKs). The
+      app's fonts and other visual assets are bundled directly inside the
+      app itself rather than loaded from anywhere online.
+    </p>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num heading-face">6</span>
+      <h2 class="heading-face">Changes to this policy</h2>
+    </div>
+    <p>
+      If this policy ever changes — for example, if a future version of
+      Paint Pals adds a new feature that changes what data is handled —
+      we'll update the effective date above and describe the change
+      here before that version is released.
+    </p>
+  </section>
+
+  <div class="contact-card">
+    <h2 class="heading-face">Questions?</h2>
+    <p>If you have any questions about this policy or how Paint Pals handles information, reach out any time.</p>
+    <a class="email" href="mailto:mrystudio15@gmail.com">mrystudio15@gmail.com</a>
+  </div>
+
+  <footer class="fine">Paint Pals is developed by MRY Studio.</footer>
+
+</div>
+
+</body>
+</html>
